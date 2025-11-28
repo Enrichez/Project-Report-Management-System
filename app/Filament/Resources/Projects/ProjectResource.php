@@ -21,7 +21,9 @@ class ProjectResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBriefcase;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Project Management';
+    protected static string|UnitEnum|null $navigationGroup = 'Project Management';
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {
@@ -36,7 +38,7 @@ class ProjectResource extends Resource
     public static function getRelations(): array
     {
         return [
-            
+
         ];
     }
 

@@ -21,7 +21,9 @@ class ReportResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentChartBar;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Project Management';
+    protected static string|UnitEnum|null $navigationGroup = 'Project Management';
+
+    protected static ?int $navigationSort = 2;
 
     public static function form(Schema $schema): Schema
     {

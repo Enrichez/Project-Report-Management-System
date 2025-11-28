@@ -19,9 +19,11 @@ class ComponentResource extends Resource
 {
     protected static ?string $model = Component::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCubeTransparent;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCube;
 
     protected static UnitEnum|string|null $navigationGroup = 'Project Management';
+
+    protected static ?int $navigationSort = 4;
 
     public static function form(Schema $schema): Schema
     {

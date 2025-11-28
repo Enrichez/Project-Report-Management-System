@@ -2,9 +2,29 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ComponentValue extends Model
 {
-    //
+    use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        'entity_id',
+        'attribute_id',
+        'value_string',
+        'value_number',
+        'value_date',
+    ];
+
+    public function componentAttribute()
+    {
+        return $this->belongsTo(ComponentAttribute::class);
+    }
+
+    public function componentEntity()
+    {
+        return $this->belongsTo(ComponentEntity::class, 'entity_id');
+    }
 }
