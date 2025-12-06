@@ -13,11 +13,11 @@ class ComponentEntityForm
     {
         return $schema
             ->components([
-                Select::make('component_id')->label('Component')
-                    ->relationship('component', 'name')
-                    ->required(),
                 Select::make('report_component_id')->label('Report Component')
                     ->relationship('reportComponent', 'name')
+                    ->required(),
+                Select::make('component_id')->label('Component')
+                    ->relationship('component', 'name')
                     ->required(),
                 TextInput::make('name')
                     ->required(),

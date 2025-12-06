@@ -5,8 +5,11 @@ namespace App\Filament\Resources\Reports\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
+use Filament\Actions\DeleteAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use View;
 
 class ReportsTable
 {
@@ -24,12 +27,14 @@ class ReportsTable
                 //
             ])
             ->recordActions([
+                ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
-                BulkActionGroup::make([
+                // BulkActionGroup::make([
                     DeleteBulkAction::make(),
-                ]),
+                // ]), 
             ]);
     }
 }

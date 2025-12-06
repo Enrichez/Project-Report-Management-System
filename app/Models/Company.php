@@ -16,4 +16,9 @@ class Company extends Model
         'name',
         'description',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

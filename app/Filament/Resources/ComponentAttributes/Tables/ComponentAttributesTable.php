@@ -15,8 +15,7 @@ class ComponentAttributesTable
     {
         return $table
             ->columns([
-                TextColumn::make('component_id')
-                    ->numeric()
+                TextColumn::make('component.name')
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),

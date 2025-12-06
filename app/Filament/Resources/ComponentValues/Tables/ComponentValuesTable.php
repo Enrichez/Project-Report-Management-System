@@ -14,11 +14,9 @@ class ComponentValuesTable
     {
         return $table
             ->columns([
-                TextColumn::make('entity_id')
-                    ->numeric()
+                TextColumn::make('componententity.name')
                     ->sortable(),
-                TextColumn::make('attribute_id')
-                    ->numeric()
+                TextColumn::make('componentattribute.name')
                     ->sortable(),
                 TextColumn::make('value_string')
                     ->sortable()

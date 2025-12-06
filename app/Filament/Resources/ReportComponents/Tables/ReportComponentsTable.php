@@ -18,10 +18,10 @@ class ReportComponentsTable
     {
         return $table
             ->columns([
-                TextColumn::make('report_id')
+                TextColumn::make('report.name')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('component_id')
+                TextColumn::make('component.name')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('name')

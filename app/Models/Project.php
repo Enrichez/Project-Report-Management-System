@@ -21,4 +21,9 @@ class Project extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function reports()
+    {
+        return $this->hasMany(Report::class);
+    }
 }

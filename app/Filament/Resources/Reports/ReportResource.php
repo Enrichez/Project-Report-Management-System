@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Reports;
 use App\Filament\Resources\Reports\Pages\CreateReport;
 use App\Filament\Resources\Reports\Pages\EditReport;
 use App\Filament\Resources\Reports\Pages\ListReports;
+use App\Filament\Resources\Reports\Pages\ViewReport;
 use App\Filament\Resources\Reports\Schemas\ReportForm;
 use App\Filament\Resources\Reports\Tables\ReportsTable;
 use App\Models\Report;
@@ -38,7 +39,7 @@ class ReportResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\ComponentsRelationManager::class,
         ];
     }
 
@@ -48,6 +49,7 @@ class ReportResource extends Resource
             'index' => ListReports::route('/'),
             'create' => CreateReport::route('/create'),
             'edit' => EditReport::route('/{record}/edit'),
+            'view' => ViewReport::route('/{record}'),
         ];
     }
 }

@@ -22,4 +22,9 @@ class Report extends Model
     {
         return $this->belongsTo(Project::class);
     }
+
+    public function components()
+    {
+        return $this->hasMany(ReportComponent::class);
+    }
 }

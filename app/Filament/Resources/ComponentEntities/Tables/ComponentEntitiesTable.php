@@ -15,10 +15,10 @@ class ComponentEntitiesTable
     {
         return $table
             ->columns([
-                TextColumn::make('component_id')
+                TextColumn::make('component.name')
                     ->numeric()
                     ->sortable(),
-                TextColumn::make('report_component_id')
+                TextColumn::make('reportcomponent.name')
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('name')

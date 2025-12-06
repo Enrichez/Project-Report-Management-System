@@ -20,7 +20,7 @@ class ComponentValue extends Model
 
     public function componentAttribute()
     {
-        return $this->belongsTo(ComponentAttribute::class);
+        return $this->belongsTo(ComponentAttribute::class, 'attribute_id');
     }
 
     public function componentEntity()
