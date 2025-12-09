@@ -11,7 +11,6 @@ class ComponentEntity extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'component_id',
         'report_component_id',
         'name',
         'label',
@@ -19,13 +18,14 @@ class ComponentEntity extends Model
         'description',
     ];
 
-    public function component()
-    {
-        return $this->belongsTo(Component::class);
-    }
-
+    // Relation to Parent Record / ReportComponent
     public function reportComponent()
     {
         return $this->belongsTo(ReportComponent::class);
+    }
+
+    public function componentValues()
+    {
+        return $this->hasMany(ComponentValue::class, 'entity_id');
     }
 }

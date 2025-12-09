@@ -23,9 +23,9 @@ class ComponentAttributeResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedQueueList;
 
-    protected static UnitEnum|string|null $navigationGroup = 'Project Management';
+    protected static UnitEnum|string|null $navigationGroup = 'Form Settings';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 4;
 
     public static function form(Schema $schema): Schema
     {

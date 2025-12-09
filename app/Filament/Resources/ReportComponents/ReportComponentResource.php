@@ -27,7 +27,10 @@ class ReportComponentResource extends Resource
 
     protected static string|UnitEnum|null $navigationGroup = 'Project Management';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 3;
+
+    protected static ?string $navigationLabel = 'Records';
+
 
     public static function form(Schema $schema): Schema
     {

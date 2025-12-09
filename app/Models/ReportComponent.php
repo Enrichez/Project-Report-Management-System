@@ -26,4 +26,16 @@ class ReportComponent extends Model
     {
         return $this->belongsTo(Component::class);
     }
+
+    // Row relationships
+    public function componentAttributes()
+    {
+        return $this->hasMany(ComponentAttribute::class, 'report_component_id');
+    }
+
+    // Column relationships
+    public function componentEntities()
+    {
+        return $this->hasMany(ComponentEntity::class, 'report_component_id');
+    }
 }

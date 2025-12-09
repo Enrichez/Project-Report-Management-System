@@ -21,9 +21,9 @@ class ComponentValueResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedVariable;
 
-    protected static UnitEnum|string|null $navigationGroup = 'Project Management';
+    protected static UnitEnum|string|null $navigationGroup = 'Form Settings';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 5;
 
     public static function form(Schema $schema): Schema
     {

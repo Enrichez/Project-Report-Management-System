@@ -15,7 +15,7 @@ class ComponentAttributesTable
     {
         return $table
             ->columns([
-                TextColumn::make('component.name')
+                TextColumn::make('reportcomponent.name')
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),

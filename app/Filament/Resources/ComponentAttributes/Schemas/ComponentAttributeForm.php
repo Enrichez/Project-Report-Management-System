@@ -12,8 +12,9 @@ class ComponentAttributeForm
     {
         return $schema
             ->components([
-                Select::make('component_id')->label('Component')
-                    ->relationship('component', 'name')
+                Select::make('report_component_id')
+                    ->label('Report')
+                    ->relationship('reportcomponent', 'name')
                     ->required(),
                 TextInput::make('name')
                     ->required(),

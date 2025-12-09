@@ -15,9 +15,6 @@ class ComponentEntitiesTable
     {
         return $table
             ->columns([
-                TextColumn::make('component.name')
-                    ->numeric()
-                    ->sortable(),
                 TextColumn::make('reportcomponent.name')
                     ->numeric()
                     ->sortable(),

@@ -11,15 +11,21 @@ class ComponentAttribute extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'component_id',
+        'report_component_id',
         'name',
         'label',
         'qty',
         'value',
         'total_expense'
     ];
-    public function component()
+    
+    public function reportComponent()
     {
-        return $this->belongsTo(Component::class);
+        return $this->belongsTo(ReportComponent::class, 'report_component_id');
+    }
+
+    public function componentValues()
+    {
+        return $this->hasMany(ComponentValue::class, 'attribute_id');
     }
 }

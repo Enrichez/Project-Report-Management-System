@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
             ProjectSeeder::class,
             ReportSeeder::class,
+            ComponentSeeder::class,
+            RecordSeeder::class,
         ]);
     }
 }

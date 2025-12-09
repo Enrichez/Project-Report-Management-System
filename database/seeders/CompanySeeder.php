@@ -14,16 +14,8 @@ class CompanySeeder extends Seeder
     public function run(): void
     {
         Company::create([
-            'name' => 'Tech Innovators Inc.',
-            'description' => 'A leading company in tech innovations.',
-        ]);
-        Company::create([
-            'name' => 'Green Solutions Ltd.',
-            'description' => 'Pioneers in sustainable and eco-friendly solutions.',
-        ]);
-        Company::create([
-            'name' => 'HealthCare Plus',
-            'description' => 'Committed to providing quality healthcare services.',
+            'name' => 'PT Lupak Dalam Estate',
+            'description' => 'Perusahaan PT Lupak Dalam Estate bergerak di bidang perkebunan kelapa sawit dan berkomitmen terhadap praktik pertanian berkelanjutan.',
         ]);
     }
 }

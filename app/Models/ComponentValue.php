@@ -11,6 +11,7 @@ class ComponentValue extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'report_component_id',
         'entity_id',
         'attribute_id',
         'value_string',
@@ -18,13 +19,15 @@ class ComponentValue extends Model
         'value_date',
     ];
 
-    public function componentAttribute()
-    {
-        return $this->belongsTo(ComponentAttribute::class, 'attribute_id');
-    }
-
+    // Relation to Column / ComponentEntity
     public function componentEntity()
     {
         return $this->belongsTo(ComponentEntity::class, 'entity_id');
+    }
+
+    // Relation to Row / ReportComponent
+    public function componentAttribute()
+    {
+        return $this->belongsTo(ComponentAttribute::class, 'attribute_id');
     }
 }
